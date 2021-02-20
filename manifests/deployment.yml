@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "demoaksculster009-fc8d"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "demoaksculster009-fc8d"
+  template:
+    metadata:
+      labels:
+        app: "demoaksculster009-fc8d"
+    spec:
+      containers:
+        - name: "demoaksculster009-fc8d"
+          image: "demoacr009.azurecr.io/demoaksculster009"
+          ports:
+          - containerPort: 5000
